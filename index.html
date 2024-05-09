@@ -1,303 +1,284 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap"
+      rel="stylesheet"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Mohammad Taha Areeb</title>
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+        /* overflow: hidden; */
+      }
 
-<head>
-  <meta charset="UTF-8">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mohammad Taha Areeb</title>
-  <style>
-    /* Reset CSS */
-    * {
-      margin: 0px;
-      padding: 0px;
-      box-sizing: border-box;
-    }
+      .container {
+        /* margin-left: 10px; */
+        margin-right: 10px;
+        /* margin-top: 20px; */
+        justify-content: left;
+        height: calc(100vh - 60px);
+      }
 
-    /* Custom CSS */
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f0f0f0;
-      background-image: url("image.png");
-    }
-
-
-
-
-    /* For screens smaller than 768px (typical smartphones) */
-@media (max-width: 768px) {
-  .container {
-    margin: 10px;
-  }
-
-  .firstname {
-    font-size: 40px;
-  }
-
-  .lastname {
-    font-size: 35px;
-  }
-}
-
-/* For screens between 768px and 1024px (tablets) */
-@media (min-width: 768px) and (max-width: 1024px) {
-  .container {
-    margin: 20px;
-  }
-
-  .firstname {
-    font-size: 50px;
-  }
-
-  .lastname {
-    font-size: 45px;
-  }
-
-  .project {
-    width: 250px;
-    margin: 15px;
-  }
-}
-
-/* For screens larger than 1024px (desktops) */
-@media (min-width: 1024px) {
-  .container {
-    margin: 50px;
-  }
-
-  .firstname {
-    font-size: 75px;
-  }
-
-  .lastname {
-    font-size: 65px;
-  }
-}
-
-
-
-
-    /* header {
-      padding: 20px;
-      text-align: center;
-      background-color: #308EFF;
-      color: white;
-      border-radius: 15px;
-    } */
-
-    .container {
-      margin-left: 20px;
-      margin-top: 20px;
-      justify-content: left;
-      /* align-items: center; */
-      height: calc(100vh - 60px);
-    }
-
-    .firstname {
-      font-size: 75px;
-      font-family: 'Playfair Display', serif;
-      animation: slideIn 2s forwards, gradientEffect 2s linear infinite;
-      opacity: 0;
-      color: transparent;
-    }
-
-    .lastname {
-      font-size: 65px;
-      font-family: 'Playfair Display', serif;
-      animation: slideIn 2s forwards, gradientEffect 2s linear infinite;
-      opacity: 0;
-      color: transparent;
-    }
-
-    @keyframes slideIn {
-      0% {
-        transform: translateX(-100%);
+      .firstname {
+        /* font-size: 75px; */
+        font-family: "Playfair Display", serif;
+        animation: slideIn 2s forwards, gradientEffect 2s linear infinite;
         opacity: 0;
+        color: transparent;
       }
 
-      100% {
-        transform: translateX(0);
-        opacity: 1;
-      }
-    }
-
-    @keyframes gradientEffect {
-      0% {
-        background-position: 0% 50%;
+      .lastname {
+        /* font-size: 65px; */
+        font-family: "Playfair Display", serif;
+        animation: slideIn 2s forwards, gradientEffect 2s linear infinite;
+        opacity: 0;
+        color: transparent;
       }
 
-      100% {
-        background-position: 0% 50%;
+      @keyframes slideIn {
+        0% {
+          transform: translateX(-100%);
+          opacity: 0;
+        }
+
+        100% {
+          transform: translateX(0);
+          opacity: 1;
+        }
       }
 
-      50% {
-        background-position: 100% 50%;
+      @keyframes gradientEffect {
+        0% {
+          background-position: 0% 50%;
+        }
+
+        100% {
+          background-position: 0% 50%;
+        }
+
+        50% {
+          background-position: 100% 50%;
+        }
       }
-    }
 
-    .firstname::after {
-      content: "Mohammad";
-      background: linear-gradient(to right, #e57aec, #d18de7, #cb90ff);
-      background-clip: text;
-      -webkit-background-clip: text;
-      color: transparent;
-      display: inline-block;
-    }
+      .firstname::after {
+        content: "Mohammad";
+        background: linear-gradient(to right, #e57aec, #d18de7, #cb90ff);
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+        display: inline-block;
+      }
 
-    .lastname::after {
-      content: "Taha  Areeb";
-      background: linear-gradient(to right, #cb90ff, #dfbaff, #68acff, #308EFF);
-      background-clip: text;
-      -webkit-background-clip: text;
-      color: transparent;
-      display: inline-block;
-    }
+      .lastname::after {
+        content: "Taha  Areeb";
+        background: linear-gradient(
+          to right,
+          #cb90ff,
+          #dfbaff,
+          #68acff,
+          #308eff
+        );
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+        display: inline-block;
+      }
 
+      #navbar {
+        position: fixed;
+        top: -50px;
+        width: 100%;
+        display: block;
+        transition: top 0.8s;
 
-    /* Portfolio Section */
-    .portfolio {
-      padding: 20px;
-      text-align: center;
-    }
-
-    .portfolio h2 {
-      color: #308EFF;
-      margin-bottom: 20px;
-    }
-
-    .portfolio p {
-      color: #555;
-      margin-bottom: 40px;
-    }
-
-    .portfolio .projects {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-wrap: wrap;
-    }
-
-    .project {
-      width: 300px;
-      margin: 20px;
-      padding: 20px;
-      border: 1px solid #ddd;
-      border-radius: 5px;
-      background-color: #fff;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    }
-
-    .project img {
-      width: 100%;
-      border-radius: 5px;
-      margin-bottom: 10px;
-    }
-
-    .project h3 {
-      color: #308EFF;
-      margin-bottom: 10px;
-    }
-
-    .project p {
-      color: #777;
-    }
+        /* From https://css.glass */
+        background: rgba(255, 255, 255, 0);
+        /* border-radius: 16px; */
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(9.6px);
+        -webkit-backdrop-filter: blur(6.6px);
+      }
+      #navbar h1 {
+        backdrop-filter: none;
+        font-family: "Playfair Display", serif;
+        background: linear-gradient(
+          to right,
+          #cb90ff,
+          #dfbaff,
+          #68acff,
+          #308eff
+        );
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+      }
 
 
-    footer {
-      /* margin-bottom: 40px; */
-      border-top: 1px solid #aaa;
-      font-family: 'Playfair Display', serif;
-      font-weight: 900;
-      font-size: small;
-      /* padding: 10px; */
-      /* background-color: #fff; */
-      /* text-align: r; */
-      position: fixed;
-      bottom: 0;
-      width: 100%;
-      backdrop-filter: blur(5px);
-      /* margin-bottom: 20px; */
-      z-index: 999;
-      /* mix-blend-mode: darken; */
-    }
+      /* .lists {
+        backdrop-filter: none;
+        font-family: "Playfair Display", serif;
+        background: linear-gradient(
+          to right,
+          #308eff,
+          #68acff,
+          #dfbaff,
+          #cb90ff
+        );
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+      } */
+
+      #experience , #projects{
+        font-family: "Playfair Display", serif;
+      }
+
+      li::marker {
+        color: black;
+      }
+    </style>
+  </head>
+
+  <body class="bg-[#f0f0f0]">
 
 
+    <div id="navbar" class="text-2xl h-[7vh] flex justify-center items-center">
+      <nav>
+        <h1
+          class="text-2xl md:text-3xl font-bold text-center backdrop-blur-none"
+        >
+          Mohammad Taha Areeb
+        </h1>
+      </nav>
+    </div>
 
-    footer p {
-      margin-left: 5px;
-    }
-  </style>
-</head>
 
-<body>
-  <!-- <header>
-    <h1>Welcome to My Portfolio</h1>
-  </header> -->
-  <div class="container">
-    <div class="firstname"></div>
-    <div class="lastname"></div>
+    <div class="container h-screen">
+      <div
+        class="firstname md:text-[75px] sm:text-[65px] text-[48px] md:mt-[5vh] mt-[3vh] ml-[2vw]"
+      ></div>
+      <div
+        class="lastname md:text-[60px] sm:text-[55px] text-[45px] ml-[2vw]"
+      ></div>
+    </div>
 
-  </div>
+    <div id="experience" class="bg- w-full h-screen">
+      <h1
+        class="text-center flex items-center text-[#308eff] justify-center text-4xl"
+      >
+        Experience
+      </h1>
 
-  <!-- <section class="portfolio">
-    <h2>My Projects</h2>
-    <p>Check out some of my work below:</p>
-    <div class="projects">
-      <div class="project">
-        <img src="project1.jpg" alt="Project 1">
-        <h3>Project 1</h3>
-        <p>Description of project 1.</p>
+      <div class="justify-left items-center md:mt-3 mt-1 bg- h-[11vh]">
+        <h2 class="text-[#cb90ff] md:text-[2.2vw] text-[4vh]">Full Stack Python Developer</h2>
+        <h3 class="text-[#cb90ff]">Infosys Limited jan 2023  -  june  2024</h3>
       </div>
-      <div class="project">
-        <img src="project2.jpg" alt="Project 2">
-        <h3>Project 2</h3>
-        <p>Description of project 2.</p>
-      </div>
-      <div class="project">
-        <img src="project3.jpg" alt="Project 3">
-        <h3>Project 3</h3>
-        <p>Description of project 3.</p>
+
+      <div class="bg- md:mt-14 mt-2 flex items-center justify-center md:w-[55vw] sm:w-[60vw] w-[70vw] ml-14">
+        <ul class="lists text-[#68acff] md:text-[3.3vh] text-[3vh]" style="list-style-type: disc">
+          <li>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum qui
+            beatae in laudantium esse commodi obcaecati assumenda, nobis,
+            nesciunt, velit pariatur. Libero quas vero similique molestias unde
+            nesciunt iusto quis.
+          </li>
+          <li>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sapiente
+            tempora blanditiis fugiat? Esse et, amet fugit maxime neque nihil
+            magni voluptatum cum, adipisci molestias, corrupti necessitatibus
+            nobis assumenda ex impedit?
+          </li>
+          <li>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat
+            exercitationem reiciendis doloremque aut molestias maiores quisquam
+            commodi suscipit alias incidunt iste ut, eos quis harum, hic facere
+            consequatur voluptatibus? Nobis?
+          </li>
+        </ul>
       </div>
     </div>
-  </section> -->
 
+    <div id="projects" class="bg-black w-full h-screen">
+      <h1
+        class="text-center flex items-center text-white justify-center text-4xl"
+      >
+        Experience
+      </h1>
 
+      <div class="justify-left items-center md:mt-3 mt-1 bg-red-900 h-[11vh]">
+        <h2 class="text-white md:text-[2.2vw] text-[4vh]">Full Stack Python Developer</h2>
+        <h3 class="text-white">Infosys Limited jan 2023  -  june  2024</h3>
+      </div>
 
-  <footer style="display: flex;">
-    <!-- <div >
-      <p style="color: #2c2c2c;font-size: medium;display: inline-block;width: 150px;">Software Developer</p>
-      <p style="display: inline-block;">Hello</p>
-      <br>
-      <p style="display: inline-block;">At</p>
-      <p style="display: inline-block;color: #177fff;">Infosys</p>
+      <div class="bg-green-800 md:mt-14 mt-2 flex items-center justify-center md:w-[55vw] sm:w-[60vw] w-[70vw] ml-14">
+        <ul class="text-white md:text-[3.3vh] text-[3vh]" style="list-style-type: disc">
+          <li>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum qui
+            beatae in laudantium esse commodi obcaecati assumenda, nobis,
+            nesciunt, velit pariatur. Libero quas vero similique molestias unde
+            nesciunt iusto quis.
+          </li>
+          <li>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sapiente
+            tempora blanditiis fugiat? Esse et, amet fugit maxime neque nihil
+            magni voluptatum cum, adipisci molestias, corrupti necessitatibus
+            nobis assumenda ex impedit?
+          </li>
+          <li>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat
+            exercitationem reiciendis doloremque aut molestias maiores quisquam
+            commodi suscipit alias incidunt iste ut, eos quis harum, hic facere
+            consequatur voluptatibus? Nobis?
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- <div style="padding: 15px 15px 2500px; font-size: 30px">
+      <p>
+        <b
+          >This example demonstrates how to slide down a navbar when the user
+          starts to scroll the page.</b
+        >
+      </p>
+      <p>Scroll down this frame to see the effect!</p>
+      <p>Scroll to the top to hide the navbar.</p>
+      <p>
+        Lorem ipsum dolor dummy text sit amet, consectetur adipiscing elit, sed
+        do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+        ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+        aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
+        in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+        officia deserunt mollit anim id est laborum.
+      </p>
     </div> -->
 
 
 
-    <!-- <div class="zxcv" style="display: inline-block;text-align: right;">
-      <p style="display: inline-block;text-align: right;margin-left:900px;">Hello</p>
-      <img src="downarrow.png">
-    </div> -->
+  </body>
+  <script>
+    // When the user scrolls down 20px from the top of the document, slide down the navbar
+    window.onscroll = function () {
+      scrollFunction();
+    };
 
-
-    <div style="flex-grow: 1;">
-      <p style="color: #2c2c2c;font-size: medium;display: inline-block;">Creative Full Stack Software Developer | Python | Django | .Net Core | Angular</p>
-      <br>
-      <p style="display: inline-block;">At</p>
-      <p style="display: inline-block;color: #177fff;">Infosys</p>
-    </div>
-
-    <div style="margin-top: 8px;margin-left:13px ;" >
-      <img src="downarrow.png">
-      <br>
-    </div>
-
-
-  </footer>
-
-
-</body>
-
+    function scrollFunction() {
+      if (
+        document.body.scrollTop > 30 ||
+        document.documentElement.scrollTop > 30
+      ) {
+        document.getElementById("navbar").style.top = "0";
+      } else {
+        document.getElementById("navbar").style.top = "-50px";
+      }
+    }
+  </script>
 </html>
