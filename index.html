@@ -1,127 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap"
-      rel="stylesheet"
-    />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <title>Mohammad Taha Areeb</title>
-    <style>
-      * {
-        margin: 0px;
-        padding: 0px;
-        box-sizing: border-box;
-        /* overflow: hidden; */
-      }
 
-      .container {
-        /* margin-left: 10px; */
-        margin-right: 10px;
-        /* margin-top: 20px; */
-        justify-content: left;
-        height: calc(100vh - 60px);
-      }
+<head>
+  <meta charset="UTF-8" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Mohammad Taha Areeb</title>
+  <style>
+    * {
+      margin: 0px;
+      padding: 0px;
+      box-sizing: border-box;
+      /* overflow: hidden; */
+    }
 
-      .firstname {
-        /* font-size: 75px; */
-        font-family: "Playfair Display", serif;
-        animation: slideIn 2s forwards, gradientEffect 2s linear infinite;
+    .container {
+      /* margin-left: 10px; */
+      margin-right: 10px;
+      /* margin-top: 20px; */
+      justify-content: left;
+      height: calc(100vh - 60px);
+    }
+
+    .firstname {
+      /* font-size: 75px; */
+      font-family: "Playfair Display", serif;
+      animation: slideIn 2s forwards, gradientEffect 2s linear infinite;
+      opacity: 0;
+      color: transparent;
+    }
+
+    .lastname {
+      /* font-size: 65px; */
+      font-family: "Playfair Display", serif;
+      animation: slideIn 2s forwards, gradientEffect 2s linear infinite;
+      opacity: 0;
+      color: transparent;
+    }
+
+    @keyframes slideIn {
+      0% {
+        transform: translateX(-100%);
         opacity: 0;
-        color: transparent;
       }
 
-      .lastname {
-        /* font-size: 65px; */
-        font-family: "Playfair Display", serif;
-        animation: slideIn 2s forwards, gradientEffect 2s linear infinite;
-        opacity: 0;
-        color: transparent;
+      100% {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+
+    @keyframes gradientEffect {
+      0% {
+        background-position: 0% 50%;
       }
 
-      @keyframes slideIn {
-        0% {
-          transform: translateX(-100%);
-          opacity: 0;
-        }
-
-        100% {
-          transform: translateX(0);
-          opacity: 1;
-        }
+      100% {
+        background-position: 0% 50%;
       }
 
-      @keyframes gradientEffect {
-        0% {
-          background-position: 0% 50%;
-        }
-
-        100% {
-          background-position: 0% 50%;
-        }
-
-        50% {
-          background-position: 100% 50%;
-        }
+      50% {
+        background-position: 100% 50%;
       }
+    }
 
-      .firstname::after {
-        content: "Mohammad";
-        background: linear-gradient(to right, #e57aec, #d18de7, #cb90ff);
-        background-clip: text;
-        -webkit-background-clip: text;
-        color: transparent;
-        display: inline-block;
-      }
+    .firstname::after {
+      content: "Mohammad";
+      background: linear-gradient(to right, #e57aec, #d18de7, #cb90ff);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+      display: inline-block;
+    }
 
-      .lastname::after {
-        content: "Taha  Areeb";
-        background: linear-gradient(
-          to right,
+    .lastname::after {
+      content: "Taha  Areeb";
+      background: linear-gradient(to right,
           #cb90ff,
           #dfbaff,
           #68acff,
-          #308eff
-        );
-        background-clip: text;
-        -webkit-background-clip: text;
-        color: transparent;
-        display: inline-block;
-      }
+          #308eff);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+      display: inline-block;
+    }
 
-      #navbar {
-        position: fixed;
-        top: -8vh;
-        width: 100%;
-        display: block;
-        transition: top 0.8s;
+    #navbar {
+      position: fixed;
+      top: -8vh;
+      width: 100%;
+      display: block;
+      transition: top 0.8s;
 
-        /* From https://css.glass */
-        background: rgba(255, 255, 255, 0);
-        /* border-radius: 16px; */
-        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-        backdrop-filter: blur(9.6px);
-        -webkit-backdrop-filter: blur(6.6px);
-      }
-      #navbar h1 {
-        backdrop-filter: none;
-        font-family: "Playfair Display", serif;
-        background: linear-gradient(
-          to right,
+      /* From https://css.glass */
+      background: rgba(255, 255, 255, 0);
+      /* border-radius: 16px; */
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+      backdrop-filter: blur(9.6px);
+      -webkit-backdrop-filter: blur(6.6px);
+    }
+
+    #navbar h1 {
+      backdrop-filter: none;
+      font-family: "Playfair Display", serif;
+      background: linear-gradient(to right,
           #cb90ff,
           #dfbaff,
           #68acff,
-          #308eff
-        );
-        -webkit-text-fill-color: transparent;
-        -webkit-background-clip: text;
-      }
+          #308eff);
+      -webkit-text-fill-color: transparent;
+      -webkit-background-clip: text;
+    }
 
-      /* .lists {
+    /* .lists {
         backdrop-filter: none;
         font-family: "Playfair Display", serif;
         background: linear-gradient(
@@ -135,261 +130,338 @@
         -webkit-background-clip: text;
       } */
 
-      #experience,
-      #projects {
-        font-family: "Playfair Display", serif;
-      }
+    #experience,
+    #projects {
+      font-family: "Playfair Display", serif;
+    }
 
-      li::marker {
-        color: #cb90ff;
-      }
-    </style>
-  </head>
+    li::marker {
+      color: #cb90ff;
+    }
 
-  <body class="bg-[#f0f0f0]">
-    <div id="navbar" class="text-2xl h-[7vh] flex justify-center items-center">
-      <nav>
-        <h1
-          class="text-2xl md:text-3xl font-bold text-center backdrop-blur-none"
-        >
-          Mohammad Taha Areeb
-        </h1>
-      </nav>
-    </div>
+    .input-box:focus {}
 
-    <div class="container h-screen">
-      <div
-        class="firstname md:text-[75px] sm:text-[65px] text-[48px] md:mt-[5vh] mt-[3vh] ml-[2vw]"
-      ></div>
-      <div
-        class="lastname md:text-[60px] sm:text-[55px] text-[45px] ml-[2vw]"
-      ></div>
-    </div>
+    #search-button  {
+      background-color: linear-gradient(to right,
+          #cb90ff,
+          #dfbaff,
+          #68acff,
+          #308eff);
+    }
 
-    <div id="experience" class="bg- w-full h-screen">
-      <h1
-        class="text-center flex items-center text-[#308eff] justify-center md:text-[5vh] text-[4vh]"
-      >
-        Experience
-      </h1>
+    #details{
+      background-color:linear-gradient(to right,
+          #cb90ff,
+          #dfbaff,
+          #68acff,
+          #308eff);
+    }
 
-      <div class="justify-left items-center md:mt-3 mt-1 bg- h-[11vh]">
-        <h2 class="text-[#cb90ff] md:text-[4.5vh] text-[3vh]">
-          Full Stack Python Developer
-        </h2>
-        <h3 class="text-[#cb90ff] md:text-[3vh] text-[2vh]">Infosys Limited jan 2023 - june 2024</h3>
-      </div>
+    #showMe {
+      animation: cssAnimation 0s 5s forwards;
+      visibility: hidden;
+    }
 
-      <div
-        class="bg- md:mt-14 mt-[4vh] flex items-center justify-center md:w-[55vw] sm:w-[60vw] w-[70vw] ml-14"
-      >
-        <ul
-          class="lists text-[#68acff] 2xl:text-[3.2vh] xl:text-[3vh] lg:text-[2.5vh] md:text-[1.8vh] sm:text-[1.9vh] text-[2vh]"
-          style="list-style-type: disc"
-        >
-          <li class="">
-            Developed REST APIs for Infosys learning platform using Django REST
-            Framework, making communication between platform modules smooth.
-            Built frontend with React and Tailwind CSS, improving user
-            experience through intuitive design.
-          </li>
-          <li class="mt-[2vh]">
-            Led backend and frontend development for a Food Supply company,
-            using Django and React to create scalable solutions. Fixed bugs to
-            ensure application stability and optimized performance for seamless
-            user interaction.
-          </li>
-          <li class="mt-[2vh]">
-            Developed an internal new claim system using Django for building
-            RESTful APIs to streamline the claim handling process within the
-            organization, and created a user-friendly interface with React.js,
-            HTML and Tailwind CSS.
-          </li>
-        </ul>
-      </div>
-    </div>
-
-    <div id="experience" class="bg- w-full h-screen">
-      <h1
-        class="text-center flex items-center text-[#308eff] justify-center md:text-[5vh] text-[4vh]"
-      >
-        Experience
-      </h1>
-
-      <div class="justify-left items-center md:mt-3 mt-1 bg- h-[11vh]">
-        <h2 class="text-[#cb90ff] md:text-[4.5vh] text-[3vh]">
-          Full Stack Python Developer
-        </h2>
-        <h3 class="text-[#cb90ff] md:text-[3vh] text-[2vh]">Infosys Limited jan 2023 - june 2024</h3>
-      </div>
-
-      <div
-        class="bg- md:mt-14 mt-[4vh] flex items-center justify-center md:w-[55vw] sm:w-[60vw] w-[70vw] ml-14"
-      >
-        <ul
-          class="lists text-[#68acff] 2xl:text-[3.2vh] xl:text-[3vh] lg:text-[2.5vh] md:text-[1.8vh] sm:text-[1.9vh] text-[2vh]"
-          style="list-style-type: disc"
-        >
-          <li class="">
-            Developed REST APIs for Infosys learning platform using Django REST
-            Framework, making communication between platform modules smooth.
-            Built frontend with React and Tailwind CSS, improving user
-            experience through intuitive design.
-          </li>
-          <li class="mt-[2vh]">
-            Led backend and frontend development for a Food Supply company,
-            using Django and React to create scalable solutions. Fixed bugs to
-            ensure application stability and optimized performance for seamless
-            user interaction.
-          </li>
-          <li class="mt-[2vh]">
-            Developed an internal new claim system using Django for building
-            RESTful APIs to streamline the claim handling process within the
-            organization, and created a user-friendly interface with React.js,
-            HTML and Tailwind CSS.
-          </li>
-        </ul>
-      </div>
-    </div>
-
-
-    <div class="">
-      <!-- <div class="w-full h-40 bg-[#cb90ff]"></div>
-      <div class="w-full h-[5vw] bg-[#68acff]"></div>
-      <div class="w-full h-[5vw] bg-[#cb90ff]"></div> -->
-
-
-
-
-
-
-        <div class='h-96'></div>
-        <div class="w-full h-[1px] bg-[#dfbaff]"></div>
-        <div class="w-full h-[20px]"></div>
-
-        <div class="w-full h-[2px] bg-[#dfbaff]"></div>
-        <div class="w-full h-[19px]"></div>
-
-        <div class="w-full h-[3px] bg-[#d3a6f9]"></div>
-        <div class="w-full h-[18px]"></div>
-
-        <div class="w-full h-[4px] bg-[#d3a6f9]"></div>
-        <div class="w-full h-[17px]"></div>
-
-        <div class="w-full h-[5px] bg-[#d09df9]"></div>
-        <div class="w-full h-[17px]"></div>
-
-        <div class="w-full h-[6px] bg-[#d09df9]"></div>
-        <div class="w-full h-[16px]"></div>
-
-        <div class="w-full h-[7px] bg-[#d09bff]"></div>
-        <div class="w-full h-[15px]"></div>
-
-        <div class="w-full h-[8px] bg-[#d09bff]"></div>
-        <div class="w-full h-[14px]"></div>
-
-        <div class="w-full h-[9px] bg-[#c98efd]"></div>
-        <div class="w-full h-[13px]"></div>
-
-        <div class="w-full h-[10px] bg-[#c98efd]"></div>
-        <div class="w-full h-[12px]"></div>
-
-        <div class="w-full h-[11px] bg-[#c481ff]"></div>
-        <div class="w-full h-[11px]"></div>
-
-        <div class="w-full h-[12px] bg-[#c481ff]"></div>
-        <div class="w-full h-[10px]"></div>
-
-        <div class="w-full h-[13px] bg-[#be76fd]"></div>
-        <div class="w-full h-[9px]"></div>
-
-        <div class="w-full h-[14px] bg-[#be76fd]"></div>
-        <div class="w-full h-[8px]"></div>
-
-        <div class="w-full h-[15px] bg-[#ba6cfd]"></div>
-        <div class="w-full h-[7px]"></div>
-
-        <div class="w-full h-[16px] bg-[#ba6cfd]"></div>
-        <div class="w-full h-[6px]"></div>
-
-        <div class="w-full h-[17px] bg-[#b45eff]"></div>
-        <div class="w-full h-[5px]"></div>
-
-        <div class="w-full h-[18px] bg-[#b45eff]"></div>
-        <div class="w-full h-[4px]"></div>
-
-        <div class="w-full h-[19px] bg-[#ac53fa]"></div>
-        <div class="w-full h-[3px]"></div>
-
-        <div className="w-full h-[20px] bg-[#308eff]"></div>
-        <div className="w-full h-[2px]"></div>
-
-        <div className="w-full h-[21px] bg-[#308eff]"></div>
-        <div className="w-full h-[1px]"></div>
-
-        <div className="w-full h-[22px] bg-[#308eff]"></div>
-        <div className="w-full h-[0px]"></div>
-
-        <div className="w-full h-[30px] bg-[#308eff]"></div>
-
-    </div>
-
-
-
-
-
-
-    <!-- <div style="padding: 15px 15px 2500px; font-size: 30px">
-      <p>
-        <b
-          >This example demonstrates how to slide down a navbar when the user
-          starts to scroll the page.</b
-        >
-      </p>
-      <p>Scroll down this frame to see the effect!</p>
-      <p>Scroll to the top to hide the navbar.</p>
-      <p>
-        Lorem ipsum dolor dummy text sit amet, consectetur adipiscing elit, sed
-        do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-        ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-        aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
-        in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-        officia deserunt mollit anim id est laborum.
-      </p>
-    </div> -->
-
-    <!-- <footer style="display: flex;">
-      <div style="flex-grow: 1;">
-     <p style="color: #2c2c2c;font-size: medium;display: inline-block;">Creative Full Stack Software Developer | Python | Django | .Net Core | Angular</p>
-     <br>
-     <p style="display: inline-block;">At</p>
-     <p style="display: inline-block;color: #177fff;">Infosys</p>
-   </div>
-
-   <div style="margin-top: 8px;margin-left:13px ;" >
-     <img src="downarrow.png">
-     <br>
-   </div>
-
-
- </footer> -->
-  </body>
-  <script>
-    // When the user scrolls down 20px from the top of the document, slide down the navbar
-    window.onscroll = function () {
-      scrollFunction();
-    };
-
-    function scrollFunction() {
-      if (
-        document.body.scrollTop > 30 ||
-        document.documentElement.scrollTop > 30
-      ) {
-        document.getElementById("navbar").style.top = "0";
-      } else {
-        document.getElementById("navbar").style.top = "-50px";
+    @keyframes cssAnimation {
+      to {
+        visibility: visible;
       }
     }
-  </script>
+
+
+    .gradient-button {
+      @apply bg-gradient-to-r from-gradient-start via-gradient-middle-1 via-gradient-middle-2 to-gradient-end text-white px-4 py-2 rounded-md;
+    }
+  </style>
+</head>
+
+<body class="bg-[#f0f0f0]">
+  <div id="navbar" class="text-2xl h-[7vh] flex justify-center items-center">
+    <nav>
+      <h1 class="text-2xl md:text-3xl font-bold text-center backdrop-blur-none">
+        Mohammad Taha Areeb
+      </h1>
+    </nav>
+  </div>
+
+
+
+  <div class="container h-screen">
+    <div class="firstname md:text-[75px] sm:text-[65px] text-[48px] md:mt-[5vh] mt-[3vh] ml-[2vw]"></div>
+    <div class="lastname md:text-[60px] sm:text-[55px] text-[45px] ml-[2vw]"></div>
+
+    
+
+
+
+
+    <div class="mt-16">
+      <h1 class="ml-[2vw] inline-block md:text-[#cb90ff] text-blue-400 font-['Playfair_Display']  md:text-[4.8vh] text-[3vh]"> Full Stack Python Developer
+      </h1>
+      <h1 id="details" class=" ml-[2vw] inline-block text-[#cb90ff]  md:text-blue-400 font-['Playfair_Display'] md:text-[3.3vh] text-[2.5vh]">Python | Django | Django REST API | React Js | My SQL | Oracle
+      </h1>
+
+      <h1 id="details" class=" ml-[2vw]  text-blue-400 font-['Playfair_Display'] text-xl">@ Infosys
+      </h1>
+      
+    </div>
+
+
+    <!-- <div id="ShowMe" class="ml-[2.7vw] mt-[10vw]">
+      <input required placeholder="Ask anything about Taha"
+        class="p-2 w-[80%] focus:border-[0px] placeholder:font-['Playfair_Display'] placeholder:font-bold     boder-2 placeholder:text-center text-[#8bbfff] focus:border-white  placeholder:text-[#8bbfff]  h-10 bg-[#f0f0f0] rounded-md border-[#cb90ff] border selection:border-red-500"
+        type="text" />
+
+      <button class=" bg- text-[#cb90ff]  ml-7 rounded-md">
+        <img src="stylemaster.png" alt="" class="w-6 h-7 flex  justify-center items-center">
+      </button>
+    </div> -->
+  </div>
+
+
+
+
+  <div id="experience" class="bg- w-full h-screen">
+    <h1 class="text-center font-bold flex items-center text-[#308eff] justify-center md:text-[5vh] text-[3.8vh]">
+      Experience
+    </h1>
+
+    <div class="justify-left items-center md:mt-3 mt-1 bg- h-[11vh]">
+      <h2 class="text-[#cb90ff] sm:ml-2 md:text-[4.5vh] text-[3vh]">
+        Full Stack Python Developer
+      </h2>
+      <h3 class="text-[#cb90ff] sm:ml-2 md:text-[3vh] text-[2vh]">
+        Infosys Limited jan 2023 - june 2024
+      </h3>
+    </div>
+
+    <div class="bg- md:mt-14 mt-[4vh] flex items-center justify-center md:w-[55vw] sm:w-[60vw] w-[70vw] ml-14">
+      <ul
+        class="lists text-[#68acff] 2xl:text-[3.2vh] xl:text-[3vh] lg:text-[2.5vh] md:text-[1.8vh] sm:text-[1.9vh] text-[2vh]"
+        style="list-style-type: disc">
+        <li class="">
+          Developed REST APIs for Infosys learning platform using Django REST
+          Framework, making communication between platform modules smooth.
+          Built frontend with React and Tailwind CSS, improving user
+          experience through intuitive design.
+        </li>
+        <li class="mt-[2vh]">
+          Led backend and frontend development for a Food Supply company,
+          using Django and React to create scalable solutions. Fixed bugs to
+          ensure application stability and optimized performance for seamless
+          user interaction.
+        </li>
+        <li class="mt-[2vh]">
+          Developed an internal new claim system using Django for building
+          RESTful APIs to streamline the claim handling process within the
+          organization, and created a user-friendly interface with React.js,
+          HTML and Tailwind CSS.
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div id="projects" class="bg- w-full h-screen">
+    <h1 class="text-center font-bold flex items-center text-[#308eff] justify-center md:text-[5vh] text-[4vh]">
+      Projects
+    </h1>
+
+    <div
+      class="w-full h-full mt-8 flex flex-col sm:md:flex-row md:flex-row lg:flex-row xl:flex-row items-center justify-center">
+      <!-- <div
+        class="w-[45vw] h-[55vw] xl:w-[20vw] xl:h-[28vw] lg:w-[20vw] lg:h-[28vw] md:w-[20vw] md:h-[28vw] sm:w-[20vw] sm:h-[28vw] bg-[#308eff] rounded-lg">
+      </div> -->
+      <img
+        class="w-[45vw] border-[#308eff] border-[1px] h-[55vw] xl:w-[20vw] xl:h-[28vw] lg:w-[20vw] lg:h-[28vw] md:w-[20vw] md:h-[28vw] sm:w-[20vw] sm:h-[28vw] rounded-md"
+        src="stylemaster.png" alt="">
+
+
+      <!-- <div class="w-[15vw] bg-[#308eff] ml-9 h-[18vw] rounded-lg"></div> -->
+      <div
+        class="text-[#308eff] w-[95vw] h-[40vw] xl:w-[62vw] xl:h-[28vw] sm:w-[72vw] sm:h-[28vw] lg:w-[62vw] lg:h-[28vw] md:w-[62vw] md:h-[28vw] mt-6 xl:mt-0 lg:mt-0 md:mt-0 rounded-md p-2 text-[1.9vh] sm:text-[1.8vw] md:text-[1.7vw] lg:text-[1.5vw] xl:text-[1.5vw] sm:ml-10 xl:p-12 md:xl:ml-10 lg:ml-10 xl:ml-10">
+        <a target="_blank" href="https://stylemaster.netlify.app/"
+          class="font-bold  text-[#cb90ff] text-[2.9vh] sm:text-[2.8vw] md:text-[2.7vw] lg:text-[2.5vw] xl:text-[2.5vw]">Style
+          Master</a>
+        <br>
+        <br>
+        <p>
+          Developed a web application that enables HTML, CSS, and JavaScript developers to generate and test code
+          snippets
+          efficiently. The application takes commands from users and dynamically generates code, which is then executed
+          in
+          real-time within an iframe on the same screen.
+          <br>
+          <br>
+          &#8728
+          Technologies used: Django REST Framework, Gemini API, HTML, CSS, JavaScript.
+        </p>
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <!-- <div id="projects" class="bg- w-full h-screen">
+
+
+    <div
+      class="w-full h-full mt-8 flex flex-col sm:md:flex-row md:flex-row lg:flex-row xl:flex-row items-center justify-center">
+      
+      
+
+
+      <div
+        class="text-[#308eff] w-[95vw] h-[40vw] xl:w-[62vw] xl:h-[28vw] sm:w-[72vw] sm:h-[28vw] lg:w-[62vw] lg:h-[28vw] md:w-[62vw] md:h-[28vw] mt-6 xl:mt-0 lg:mt-0 md:mt-0 rounded-md p-2 text-[1.9vh] sm:text-[1.8vw] md:text-[1.7vw] lg:text-[1.5vw] xl:text-[1.5vw] xl:p-12  sm:ml-10 md:xl:ml-10 lg:ml-10 xl:ml-10">
+        <a target="_blank" href="https://stylemaster.netlify.app/"
+          class="font-bold  text-[#cb90ff] text-[2.9vh] sm:text-[2.8vw] md:text-[2.7vw] lg:text-[2.5vw] xl:text-[2.5vw]">Style
+          Master</a>
+        <br>
+        <br>
+        <p>
+          Developed a web application that enables HTML, CSS, and JavaScript developers to generate and test code
+          snippets
+          efficiently. The application takes commands from users and dynamically generates code, which is then executed
+          in
+          real-time within an iframe on the same screen.
+          <br>
+          <br>
+          &#8728
+          Technologies used: Django REST Framework, Gemini API, HTML, CSS, JavaScript.
+        </p>
+      </div>
+      <img
+        class="w-[45vw] border-[#308eff] border-[1px] h-[55vw] xl:w-[20vw] xl:h-[28vw] lg:w-[20vw] lg:h-[28vw] md:w-[20vw] md:h-[28vw] sm:w-[20vw] sm:h-[28vw] rounded-md"
+        src="stylemaster.png" alt="">
+    </div>
+  </div> -->
+
+
+
+
+
+  <div class="footer">
+    <div class="h-96"></div>
+    <div class="w-full h-[1px] bg-[#dfbaff]"></div>
+    <div class="w-full h-[20px]"></div>
+
+    <div class="w-full h-[2px] bg-[#dfbaff]"></div>
+    <div class="w-full h-[19px]"></div>
+
+    <div class="w-full h-[3px] bg-[#d3a6f9]"></div>
+    <div class="w-full h-[18px]"></div>
+
+    <div class="w-full h-[4px] bg-[#d3a6f9]"></div>
+    <div class="w-full h-[17px]"></div>
+
+    <div class="w-full h-[5px] bg-[#d09df9]"></div>
+    <div class="w-full h-[17px]"></div>
+
+    <div class="w-full h-[6px] bg-[#d09df9]"></div>
+    <div class="w-full h-[16px]"></div>
+
+    <div class="w-full h-[7px] bg-[#d09bff]"></div>
+    <div class="w-full h-[15px]"></div>
+
+    <div class="w-full h-[8px] bg-[#d09bff]"></div>
+    <div class="w-full h-[14px]"></div>
+
+    <div class="w-full h-[9px] bg-[#c98efd]"></div>
+    <div class="w-full h-[13px]"></div>
+
+    <div class="w-full h-[10px] bg-[#c98efd]"></div>
+    <div class="w-full h-[12px]"></div>
+
+    <div class="w-full h-[11px] bg-[#c481ff]"></div>
+    <div class="w-full h-[11px]"></div>
+
+    <div class="w-full h-[12px] bg-[#c481ff]"></div>
+    <div class="w-full h-[10px]"></div>
+
+    <div class="w-full h-[13px] bg-[#be76fd]"></div>
+    <div class="w-full h-[9px]"></div>
+
+    <div class="w-full h-[14px] bg-[#be76fd]"></div>
+    <div class="w-full h-[8px]"></div>
+
+    <div class="w-full h-[15px] bg-[#ba6cfd]"></div>
+    <div class="w-full h-[7px]"></div>
+
+    <div class="w-full h-[16px] bg-[#ba6cfd]"></div>
+    <div class="w-full h-[6px]"></div>
+
+    <div class="w-full h-[17px] bg-[#b45eff]"></div>
+    <div class="w-full h-[5px]"></div>
+
+    <div class="w-full h-[18px] bg-[#b45eff]"></div>
+    <div class="w-full h-[4px]"></div>
+
+    <div class="w-full h-[19px] bg-[#ac53fa]"></div>
+    <div class="w-full h-[3px]"></div>
+
+    <div className="w-full h-[20px] bg-[#308eff]"></div>
+    <div className="w-full h-[2px]"></div>
+
+    <div className="w-full h-[21px] bg-[#308eff]"></div>
+    <div className="w-full h-[1px]"></div>
+
+    <div className="w-full h-[22px] bg-[#308eff]"></div>
+    <div className="w-full h-[0px]"></div>
+
+    <div className="w-full h-[30px] bg-[#308eff]"></div>
+  </div>
+
+
+  <!-- <footer style="display: flex;">
+    <div style="flex-grow: 1;">
+      <p style="color: #2c2c2c;font-size: medium;display: inline-block;">Creative Full Stack Software Developer | Python
+        | Django | .Net Core | Angular</p>
+      <br>
+      <p style="display: inline-block;">At</p>
+      <p style="display: inline-block;color: #177fff;">Infosys</p>
+    </div>
+
+    <div style="margin-top: 8px;margin-left:13px ;">
+      <img src="downarrow.png">
+      <br>
+    </div>
+
+
+  </footer> -->
+</body>
+<script>
+  // When the user scrolls down 20px from the top of the document, slide down the navbar
+  window.onscroll = function () {
+    scrollFunction();
+  };
+
+  function scrollFunction() {
+    if (
+      document.body.scrollTop > 30 ||
+      document.documentElement.scrollTop > 30
+    ) {
+      document.getElementById("navbar").style.top = "0";
+    } else {
+      document.getElementById("navbar").style.top = "-50px";
+    }
+  }
+
+
+  tailwind.config = {
+    theme: {
+      extend: {
+        gradientColorStops: {
+          'gradient-start': '#cb90ff',
+          'gradient-middle-1': '#dfbaff',
+          'gradient-middle-2': '#68acff',
+          'gradient-end': '#308eff',
+        }
+      }
+    }
+  }
+
+
+
+</script>
+
 </html>
